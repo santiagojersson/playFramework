@@ -1,0 +1,27 @@
+@(contenido: String) 
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @* Here's where we render the page title `String`. *@
+        <title>Cuenta </title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/styleLogin.css")">
+
+        <script src="@routes.Assets.versioned("javascripts/login.js")" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="container">
+            <section id="content">
+                    
+                
+                    
+                    <h2>@contenido</h2>	
+                    <div>
+                        <a href="@routes.HomeController.cuentaRender()">Regrese a su cuenta</a>
+                    </div>
+                
+                </section><!-- content -->
+        </div><!-- container -->
+
+    </body>

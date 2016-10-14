@@ -1,0 +1,30 @@
+@(name: String)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @* Here's where we render the page title `String`. *@
+        <title>Busqueda</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/styleLogin.css")">
+
+        <script src="@routes.Assets.versioned("javascripts/login.js")" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="container">
+            <section id="content">
+                    
+                
+                    <form method="post" action="@routes.HomeController.buscar()">
+                    <h1>Consulte la clave @name</h1>
+                    <div>
+                        <input type="text" placeholder="Nombre Cuenta" name="cuenta"  id="cuentaId" />
+                    </div>                    
+                    <div>
+                    	<input type="submit" value="Buscar" />
+                        <a href="@routes.HomeController.cuentaRender()">Regrese a su cuenta</a>
+                    </div>
+                	</form>
+                </section><!-- content -->
+        </div><!-- container -->
+
+    </body>
